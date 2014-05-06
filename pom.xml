@@ -537,6 +537,15 @@
             </reporting>
         </profile>
     </profiles>
+	<pluginManagement>
+		<plugins>
+			<!-- Plugin for code coverage and test coverage analysis -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>${cobertura.version}</version>
+				</plugin>
+	</pluginsManagement>
 	<repositories>
     <repository>
       <id>maven.central</id>
