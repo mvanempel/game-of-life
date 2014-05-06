@@ -370,8 +370,21 @@
                             <formats>
                                 <format>xml</format>
                             </formats>
-                        </configuration>
-                    </plugin>
+					<instrumentation>
+                    <excludes>
+                        <exclude>**/*Test.class</exclude>
+                        <exclude>**/Mock*.class</exclude>
+                    </excludes>
+                </instrumentation>
+            </configuration>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>cobertura</goal>
+                    </goals>
+                </execution>
+            </executions>                    </plugin>
                             </reportPlugins>
                         </configuration>
                         <dependencies>
