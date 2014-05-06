@@ -39,7 +39,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.10</version>
                 <configuration>
-                    <skip>true</skip>
+                    <skip>false</skip>
                 </configuration>
                 <executions>
                     <execution>
@@ -164,6 +164,13 @@
                     </configuration>
                 </plugin>
 
+				<!-- Plugin for code coverage and test coverage analysis -->
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>cobertura-maven-plugin</artifactId>
+					<version>${cobertura.version}</version>
+				</plugin>
+				
             </plugins>
         </pluginManagement>
         <extensions>
@@ -451,15 +458,6 @@
                         </dependencies>
                     </plugin>
                 </plugins>
-				<pluginManagement>
-					<plugins>
-					<!-- Plugin for code coverage and test coverage analysis -->
-						<plugin>
-							<groupId>org.codehaus.mojo</groupId>
-							<artifactId>cobertura-maven-plugin</artifactId>
-							<version>${cobertura.version}</version>
-						</plugin>
-				</pluginManagement>
             </build>
             <reporting>
                 <plugins>
@@ -537,15 +535,6 @@
             </reporting>
         </profile>
     </profiles>
-	<pluginManagement>
-		<plugins>
-			<!-- Plugin for code coverage and test coverage analysis -->
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>cobertura-maven-plugin</artifactId>
-				<version>${cobertura.version}</version>
-				</plugin>
-	</pluginsManagement>
 	<repositories>
     <repository>
       <id>maven.central</id>
