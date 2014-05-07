@@ -276,9 +276,6 @@
         </profile>
         <profile>
             <id>maven3</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
             <build>
                 <plugins>
                     <plugin>
